@@ -1,0 +1,19 @@
+{% load crispy_forms_tags %}
+<form method="post" style="margin-top: 1.3em;">
+    {{ comment_form | crispy }}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+</form>
+
+| in jinja for use  filter
+
+{{ product.discount_price * 100 / product.price }}
+
+
+
+for filter form :
+            {% for filters in filter.form.category %}
+              <label class="form-check-label">
+                {{filters|add_class:"form-check-input"}}
+              </label>
+            {% endfor %}

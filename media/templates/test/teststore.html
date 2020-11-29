@@ -1,0 +1,7 @@
+<form method="GET">
+    {{ obj.form }}
+    <input type="submit" />
+</form>
+{% for objs in obj.qs %}
+    {{ objs.title }} - ${{ objs.price }}<br />
+{% endfor %}
